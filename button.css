@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 150px;
+    background-color:  rgb(217, 213, 208);
+}
+.container{
+    background-color: rgb(217, 213, 208);
+    height: 100vh;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.btn1{
+    border: 0px solid white;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.503);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* for butoon 1 */
+.btn1::before{
+    content:'' ;
+    width: 100%;
+    height: 100%;
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform:translateX(-100%) ;
+    transition: 0.5s all ease;
+}
+.btn1:Hover::before{
+    transform: translateX(0%);
+}
+
+.btn1:hover{
+    color: white;
+    background-color: rgb(255, 255, 255);
+}
+/*  for butoon 2 */
+.btn2{
+    height: 40px;
+    width: 200px;
+    border: 0px solid white;
+    border-radius: 25px;
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+    
+
+
+}
+
+.btn2::before{
+    content: "";
+    background-color:green ;
+    z-index: -1;
+    transform: translateX(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: .5s all ease;
+
+}
+.btn2:hover::before{
+    transform: translateX(-50%);
+
+}
+.btn2::after{
+    content: "";
+    background-color:green ;
+    z-index: -1;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: .5s all ease;
+
+}
+.btn2:hover::after{
+    transform: translateX(50%);
+    }
+
+.btn2:hover{
+    color: white;
+    transition: .5s all ease;
+}
+
+.btn3{
+   width: 200px;
+   height: 40px;
+   color: #000;
+   background-color: rgb(255, 255, 255);
+   border-radius: 25px;
+   border: 0px solid ;
+   position: relative;
+   z-index: 1;
+   font-size: 20px;
+   font-weight: 600;
+   box-shadow: -1px 1px 7px rgba(0, 0, 0, 0.501);
+   cursor: pointer;
+   overflow: hidden;
+
+}
+/* button 3 */
+.btn3::before{
+    content: "";
+    background-color:green ;
+    z-index: -1;
+    transform: translateX(-100%) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: .5s all ease;
+
+}
+
+.btn3:hover::before{
+    transform:  translateX(-50%);
+}
+
+.btn3::after{
+    content: "";
+    background-color:green ;
+    z-index: -1;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: .5s all ease;
+
+}
+.btn3:hover::after{
+    transform: translateX(50%);
+}
+
+.btn3:hover{
+    color: rgb(255, 255, 255);
+    transition: .5s all ease;
+}
+
+.container article{
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border: 0px solid ;
+    border-radius: 25px;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.579);
+    position: relative;
+    
+    
+
+    
+}
+.container article img{
+    width: 100%;
+    height: 100%;
+    transition: .9s all ease;
+    object-fit: cover;
+}
+.container article:hover img{
+    transform: scale(1.6);
+}
+.container article::before{
+    content: 'TOHEED';
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    transform: translateX(-50%) translateY(-280%);
+    
+    z-index: 1;
+    
+}
+.container article:hover::before{
+    transform: translateX(-50%) translateY(0%);
+    transition: .9s all ease;
+}
+
+.container article::after{
+    content: 'Lorem ipsum dolor sit amet consetur, adipisicing elit. Ad sint';
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    z-index: 1;
+    color: #050202;
+    background-color: rgba(255, 255, 255, 0.273);
+    padding: 20px 55px;
+    transform: translateY(200%);
+    
+}
+.container article:hover::after{
+    transform: translateY(0%);
+    transition: .9s all ease;
+}
